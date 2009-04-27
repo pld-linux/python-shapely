@@ -34,9 +34,10 @@ rm -rf $RPM_BUILD_ROOT
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
 
-%py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
-%py_comp $RPM_BUILD_ROOT%{py_sitedir}
-%py_postclean
+%py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}
+%py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}
+find $RPM_BUILD_ROOT%{py_sitescriptdir} -name '*.py' \
+	| grep -v ctypes_declarations | xargs rm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -45,6 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES.txt CREDITS.txt HISTORY.txt README.txt
 %dir %{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/%{module}/ctypes_declarations.py
 %{py_sitescriptdir}/%{module}/*.py[co]
 %dir %{py_sitescriptdir}/%{module}/geometry
 %{py_sitescriptdir}/%{module}/geometry/*.py[co]
