@@ -11,7 +11,7 @@ Source0:	http://pypi.python.org/packages/source/S/Shapely/Shapely-%{version}.tar
 URL:		http://pypi.python.org/pypi/Shapely
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	geos >= 3.1
 Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
