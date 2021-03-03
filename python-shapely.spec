@@ -8,12 +8,12 @@
 %define		module	shapely
 Summary:	Geospatial geometries, predicates, and operations for Python
 Name:		python-%{module}
-Version:	1.6.4
-Release:	2
+Version:	1.7.1
+Release:	1
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/S/Shapely/Shapely-%{version}.tar.gz
-# Source0-md5:	7581ef2d0fb346f9ed157f3efc75f6a4
+# Source0-md5:	2bf7bc1199b3a88b13c12109cd3d2429
 URL:		http://pypi.python.org/pypi/Shapely
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
@@ -113,6 +113,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{py_sitedir}/%{module}/speedups/*.so
 %{py_sitedir}/%{module}/speedups/*.py[co]
 %dir %{py_sitedir}/%{module}/vectorized
+%attr(755,root,root) %{py_sitedir}/%{module}/vectorized/*.so
 %{py_sitedir}/%{module}/vectorized/*.py[co]
 %{py_sitedir}/Shapely-*.egg-info
 %endif
