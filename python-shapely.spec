@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Geometrie, predykaty i operacje geoprzestrzenne dla Pythona
 Name:		python-%{module}
 # keep 1.7.x here for python2 support
 Version:	1.7.1
-Release:	4
+Release:	5
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	https://files.pythonhosted.org/packages/source/S/Shapely/Shapely-%{version}.tar.gz
