@@ -3,7 +3,7 @@
 # Conditional build:
 %bcond_with	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module
 
 %define	module	shapely
 Summary:	Geospatial geometries, predicates, and operations for Python
@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Geometrie, predykaty i operacje geoprzestrzenne dla Pythona
 Name:		python-%{module}
 # keep 1.7.x here for python2 support
 Version:	1.7.1
-Release:	6
+Release:	7
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	https://files.pythonhosted.org/packages/source/S/Shapely/Shapely-%{version}.tar.gz
